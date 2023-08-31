@@ -1,0 +1,49 @@
+---
+CVE: 2023-37759
+
+name : Blink1Control2 2.2.7 - Weak Password Encryption
+
+Exploit Author: p1ckzi
+
+Type: Weak Password Encryption
+
+Vendor Homepage: https://thingm.com/
+
+Software Link: https://github.com/todbot/Blink1Control2/releases/tag/v2.2.7
+
+Vulnerable Version: blink1control2  
+        -version: 2.2.7
+
+Tested on:
+    -Ubuntu Linux 20.04
+    -Windows 10
+    -Windows 11
+
+Score: 7.5 high 
+
+vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+vendor : blink1
+
+product: Blink1control2
+    version:
+        -2.0.0 beta3
+        -2.0.1
+        -2.0.2 beta
+        -2.0.3
+#the blink1control2 app utilises weak password encryption and an insecure method of storage
+# which can be found by accessing the /blink1/input url of the api server.
+password ciphertext for skype logins and email are listed and can be decrypted.
+description:  |
+the blink1control2 app (versions <= 2.2.7) utilises an insecure method
+of password storage which can be found by accessing the /blink1/input url
+of the api server.password ciphertext for skype logins and email are listed
+and can be decrypted. 
+
+# exploit example usage / node blink1-pass-decrypt <ciphertext>
+
+exploit: 
+
+    -path: https://www.exploit-db.com/exploits/51014
+
+...

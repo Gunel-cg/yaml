@@ -1,0 +1,38 @@
+---
+cve: 2023-2636
+Name: Subscriber SQLi
+
+Exploit Author: Lukas Kinneberg
+
+Type: SQL injection
+
+Atack vector: Network
+
+Tested on: WordPress 
+    -version : 6.2.2
+
+#references
+Github: https://github.com/lukinneberg/CVE-2023-2636
+
+Vendor Homepage: https://wordpress.org/plugins/an-gradebook/
+
+Software Link: https://github.com/lukinneberg/CVE-2023-2636/blob/main/an-gradebook.7z
+
+#The AN_GradeBook WordPress plugin through 5.0.1 does not properly sanitise and escape a parameter before using it in a SQL statement, leading to a SQL injection exploitable by users with a role as low as subscriber
+
+description: |
+WordPress AN_Gradebook plugin version 5.0.1 suffers from a remote SQL injection vulnerability.
+
+Base Score: 8.8 HIGH
+
+Vector:  CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+
+vendor : cve 2023-2636
+
+exploit: 
+    -path: https://www.exploit-db.com/exploits/51632
+  
+description: |
+    we  can use this link =>  https://www.exploit-db.com/exploits/51632
+
+...
